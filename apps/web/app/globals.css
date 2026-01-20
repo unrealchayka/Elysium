@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --first-bg-color: #111;
+  --second-bg-color: rgb(32, 32, 32);
+
+  --logo-color: #111;
+  --logo-bg-color: #c3c3c3;
+
+  --burger-color: #c3c3c3;
+  --burger-color-close: #6200ff;
+
+  --first-border-color: rgb(46, 46, 46);
+  --second-border-color: rgb(59, 59, 59);
+  
+  --first-text-color: rgb(230, 230, 230);
+  --second-text-color: rgb(160, 160, 160);
+  
+  --header-link-color: #ffffff;
+  --header-link-color-active: #6200ff;
+
+  --link-color: #6200ff;
+  --link-color-hover: #a51dff; 
+
+  --first-bg-effect-color: #6200ff;
+  --second-bg-effect-color: #bd93ff;
+  --thirt-bg-effect-color: #decaff;
+}
+
+*{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  -webkit-touch-callout: none; /* Отключение контекстного меню на iOS */
+  -webkit-user-drag: none;     /* Отключение перетаскивания в Safari */
+  -khtml-user-drag: none;      /* Отключение перетаскивания в Konqueror */
+  -moz-user-drag: none;        /* Отключение перетаскивания в Firefox */
+  -o-user-drag: none;          /* Отключение перетаскивания в Opera */
+}
