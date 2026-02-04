@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function SliderCompanies() {
     return (
-        <div className="">
+        <div className="py-10 mb-10">
             <Swiper
                 slidesPerView="auto"
                 freeMode={true}
