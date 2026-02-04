@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
-import Sidebar from "./components/elements/sidebar/Sidebar";
-import Header from "./components/elements/header/Header";
-import Bg from "./components/other/bg";
-import NotificationDropdawn from "./components/ui/NotificationDropdown";
-import Main from "./components/main/Main";
-import MatrixBackground from "./components/ui/MatrixBackground";
+import { Sidebar } from "./widgets/sidebar";
+import { Header } from "./widgets/header";
+import { NotificationDropdown } from "./features/notifications";
+import { Main } from "./widgets/main";
+import { MatrixBackground } from "./widgets/background";
 
 const rubikSans = Rubik({
   variable: "--font-geist-sans",
@@ -33,7 +32,6 @@ export default function RootLayout({
 
         <Sidebar/>
         <MatrixBackground />
-        <Bg />
         
         <Main> 
           <Header/>
@@ -41,7 +39,7 @@ export default function RootLayout({
         </Main>
 
         {/* Modals menus */}
-        <NotificationDropdawn/>
+        <NotificationDropdown/>
       </body>
     </html>
   );
