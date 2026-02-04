@@ -28,7 +28,7 @@ function SliderCompanies() {
                 {companies.map((company) => {
                     return (
                         <SwiperSlide
-                            className="w-80! h-40!"
+                            className="w-50! h-20! sm:w-60! sm:h-30! md:w-80! md:h-40!"
                             key={`${company.name}-${company.id}`}
                         >
                             <Image
