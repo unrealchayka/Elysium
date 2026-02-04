@@ -11,7 +11,7 @@ export function Header() {
     }
     
     return (
-        <header className="w-full z-10 fixed ">
+        <header className="w-full z-40 fixed ">
             <nav className="mx-auto px-6 py-6" aria-label="Основная навигация">
                 <div className="flex z-30 gap-3 h-12 items-center justify-end text-md">
                     <GanreBtn/>

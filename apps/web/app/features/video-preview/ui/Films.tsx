@@ -1,7 +1,7 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -37,20 +37,19 @@ export function Films({ videos, title, btnUrl, className }: VideoPreviewProps) {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">
             {title}
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+          <div className="w-20 h-1 bg-linear-to-r from-purple-500 to-pink-500 rounded-full"></div>
         </div>
         <div className='flex flex-col items-end'>
-          <div className="w-10 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+          <div className="w-10 h-1 bg-linear-to-r from-purple-500 to-pink-500 rounded-full"></div>
           <Link href={btnUrl} className='text-white lg:text-2xl font-bold'>See All</Link>
         </div>
       </div>
 
       <div className="relative">
         <Swiper
-          modules={[Navigation, Autoplay, Pagination]}
+          modules={[ Autoplay, Pagination]}
           spaceBetween={20}
           slidesPerView={1}
-          navigation={!isMedia900}
           pagination={{
             clickable: true,
             dynamicBullets: true
@@ -147,9 +146,9 @@ function TrendingVideoCard({ video, index = 0 }: { video: VideoItem; index?: num
           priority={index < 4}
           loading={index < 4 ? undefined : "lazy"}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold rounded-full">
+          <span className="px-3 py-1 bg-linear-to-r from-purple-600 to-pink-600 text-white text-xs font-bold rounded-full">
             TRENDING
           </span>
         </div>
@@ -183,7 +182,7 @@ function TrendingVideoCard({ video, index = 0 }: { video: VideoItem; index?: num
         <p className="text-gray-400 text-sm mb-4 line-clamp-2">
           {video.description}
         </p>
-        <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/30">
+        <button className="w-full py-3 bg-linear-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/30">
           Watch Now
         </button>
       </div>
