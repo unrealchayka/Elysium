@@ -47,86 +47,22 @@ export function Films({ videos, title, btnUrl, className }: VideoPreviewProps) {
 
       <div className="relative">
         <Swiper
-          modules={[Navigation, Autoplay, Pagination]}
+          modules={[Autoplay, Pagination]}
           spaceBetween={20}
-          slidesPerView={1}
-          navigation={!isMedia900}
           pagination={{
             clickable: true,
             dynamicBullets: true
           }}
-          autoplay={!isMedia900 ? {
-            delay: 5000,
-            disableOnInteraction: false,
-          } : false}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-            1280: {
-              slidesPerView: 4,
-              spaceBetween: 40,
-            },
-          }}
+          autoplay={{delay: 5000}}
           className="trending-swiper"
         >
           {videos.map((video, index) => (
-            <SwiperSlide key={video.id || index}>
+            <SwiperSlide key={video.id}>
               <TrendingVideoCard video={video} index={index} />
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <style jsx global>{`
-          .trending-swiper {
-            padding-bottom: 60px;
-          }
-          
-          .trending-swiper .swiper-button-next,
-          .trending-swiper .swiper-button-prev {
-            color: #fff;
-            background: rgba(255, 255, 255, 0.1);
-            width: 44px;
-            padding: 10px;
-            border: black solid 3px;
-            height: 44px;
-            border-radius: 50%;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-          }
-          
-          .trending-swiper .swiper-button-next:after,
-          .trending-swiper .swiper-button-prev:after {
-            font-size: 20px;
-          }
-          
-          .trending-swiper .swiper-button-next:hover,
-          .trending-swiper .swiper-button-prev:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
-          }
-          
-          .trending-swiper .swiper-pagination-bullet {
-            background: rgba(255, 255, 255, 0.5);
-            width: 10px;
-            height: 10px;
-            opacity: 1;
-          }
-          
-          .trending-swiper .swiper-pagination-bullet-active {
-            background: linear-gradient(45deg, #8B5CF6, #EC4899);
-            transform: scale(1.2);
-          }
-        `}</style>
       </div>
     </div>
   );
