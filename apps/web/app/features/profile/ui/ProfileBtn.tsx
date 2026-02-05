@@ -46,10 +46,13 @@ export function ProfileBtn({
           flex items-center gap-3
           px-3 py-2
           rounded-xl
-          bg-(--first-bg-color)/50
-          hover:bg-(--first-border-color)/30
+          bg-(--first-bg-color)
+          border border-(--first-border-color)
+          text-(--second-text-color)
+          hover:text-(--link-color)
+          hover:border-(--link-color)/50
           transition-colors
-          border border-(--first-border-color)/50
+          shadow-sm
         "
       >
         <div className="relative">
@@ -63,7 +66,7 @@ export function ProfileBtn({
             <div className="
               w-8 h-8
               rounded-full
-              bg-gradient-to-br from-(--link-color) to-purple-600
+              bg-linear-to-br from-(--link-color) to-purple-600
               flex items-center justify-center
             ">
               <FaRegUser className="w-4 h-4 text-white" />
@@ -100,7 +103,7 @@ export function ProfileBtn({
             transition={{ duration: 0.2 }}
             className="
               absolute right-0 top-full mt-2
-              min-w-[240px]
+              min-w-60
               bg-(--first-bg-color)
               border border-(--first-border-color)
               rounded-xl

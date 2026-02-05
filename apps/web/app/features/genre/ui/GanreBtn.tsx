@@ -25,7 +25,14 @@ export function GanreBtn() {
     return (
         <div className="">
             <motion.span
-                className="text-white text-lg hover:text-purple-500 transition-colors  h-full flex hover justify-center gap-3 items-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-white text-lg bg-[#111] px-4 
+                    rounded-xl py-2 hover:text-(--link-color)
+                    hover:border-(--link-color)/50 transition-all 
+                    shadow-sm border border-(--first-border-color) 
+                    h-full flex hover justify-center gap-3 items-center
+                    "
                 onClick={() => handleMenu(!isOpen)}
             >
                 <p>Ganres</p>
@@ -41,10 +48,10 @@ export function GanreBtn() {
                         className="absolute flex flex-wrap items-start gap-3 text-md px-10 py-5 w-250 
                                     bg-[#111]
                                     backdrop-blur-[3px] border border-white/20 
-                                    shadow-2xl shadow-purple-900/30 rounded-2xl text-white z-100 top-20 right-0">
+                                    shadow-2xl shadow-purple-900/30 rounded-2xl text-white z-100 top-20 right-6">
                         {genres.map((genre, index) => {
                             return (
-                                <motion.li onClick={()=> handleMenu(false)} key={`${index}-${genre}`}>
+                                <motion.li onClick={() => handleMenu(false)} key={`${index}-${genre}`}>
                                     <Link
                                         key={genre.slugName}
                                         href={`/movies?genre=${genre.slugName}`}

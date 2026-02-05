@@ -36,9 +36,9 @@ export function Sidebar() {
             type: 'link',
         }] as IList[] : []),
         {
-            name: 'Explores',
+            name: 'Recommend',
             icon: <MdOutlineExplore />,
-            link: '/explores',
+            link: '/recommend',
             type: 'link',
         },
         {
@@ -110,9 +110,9 @@ export function Sidebar() {
     ];
 
     return (
-        <div className="flex fixed z-30 top-0 left-0 h-full py-5 pl-5 max-[900px]:p-0">
+        <div className="flex fixed z-50 top-0 left-0 h-full py-5 pl-5 max-[900px]:p-0">
             <motion.aside
-                className={`top-0 z-2 h-full ${isOpen ? 'w-[250px]' : 'w-0'} overflow-hidden py-3 md:py-6 flex flex-col transition-all duration-400 ease-in-out gap-5 bg-[#111] shadow-sm shadow-amber-50/30 rounded-sm`}
+                className={`top-0 z-2 h-full ${isOpen ? 'w-62.5' : 'w-0'} overflow-hidden py-3 md:py-6 flex flex-col transition-all duration-400 ease-in-out gap-5 bg-[#111] shadow-sm shadow-amber-50/30 rounded-sm`}
             >
                 <Logo />
                 <SidebarNavigate list={liList} />

@@ -11,7 +11,7 @@ export function NotificationButton({
   className?: string
 }) {
     const { isOpen, handleMenu } = useNotification()
-    const [hasUnread, setHasUnread] = useState(false)
+    const [hasUnread] = useState(false)
     const isPath = usePathname().slice(1) === 'notifications';
 
   return (

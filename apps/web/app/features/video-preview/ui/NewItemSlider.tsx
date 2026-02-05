@@ -57,14 +57,6 @@ export function NewItemsSlider({ videos }: TrendingSliderProps) {
         }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
-          setTimeout(() => {
-            if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
-              swiper.params.navigation.prevEl = navigationPrevRef.current;
-              swiper.params.navigation.nextEl = navigationNextRef.current;
-              swiper.navigation.init();
-              swiper.navigation.update();
-            }
-          }, 100);
         }}
         onSlideChange={(swiper) => {
           const newIndex = swiper.activeIndex;
@@ -143,7 +135,7 @@ export function NewItemsSlider({ videos }: TrendingSliderProps) {
             </p>
           </div>
           <div className="flex min-[650px]:flex-col pointer-events-auto sm:flex-row flex-wrap gap-2 md:gap-4 mb-3">
-            <button className="px-4 md:px-8 py-2 md:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-base md:text-lg rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-2xl hover:shadow-purple-500/30 flex items-center justify-center">
+            <button className="px-4 md:px-8 py-2 md:py-4 bg-linear-to-r from-purple-600 to-pink-600 text-white font-bold text-base md:text-lg rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-2xl hover:shadow-purple-500/30 flex items-center justify-center">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>

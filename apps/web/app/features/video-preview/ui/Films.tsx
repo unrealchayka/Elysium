@@ -20,7 +20,6 @@ interface VideoPreviewProps {
 }
 
 export function Films({ videos, title, btnUrl, className }: VideoPreviewProps) {
-  const isMedia900 = useMediaQuery(900)
   
   if (videos.length === 0) {
     return (
